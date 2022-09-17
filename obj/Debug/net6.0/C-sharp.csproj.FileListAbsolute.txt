@@ -1,0 +1,15 @@
+C:\Users\overl\Documents\GitHub\C-sharp\bin\Debug\net6.0\C-sharp.exe
+C:\Users\overl\Documents\GitHub\C-sharp\bin\Debug\net6.0\C-sharp.deps.json
+C:\Users\overl\Documents\GitHub\C-sharp\bin\Debug\net6.0\C-sharp.runtimeconfig.json
+C:\Users\overl\Documents\GitHub\C-sharp\bin\Debug\net6.0\C-sharp.dll
+C:\Users\overl\Documents\GitHub\C-sharp\bin\Debug\net6.0\C-sharp.pdb
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.csproj.AssemblyReference.cache
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.AssemblyInfoInputs.cache
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.AssemblyInfo.cs
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.csproj.CoreCompileInputs.cache
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.dll
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\refint\C-sharp.dll
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.pdb
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\C-sharp.genruntimeconfig.cache
+C:\Users\overl\Documents\GitHub\C-sharp\obj\Debug\net6.0\ref\C-sharp.dll
