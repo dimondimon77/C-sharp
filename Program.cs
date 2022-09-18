@@ -17,7 +17,7 @@ for (;index < nums.Length;index++)
     {
         max = nums[index];
     }
-      }
+}
 Console.WriteLine("Максисмальное число =" + max);
 
 
