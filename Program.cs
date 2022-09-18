@@ -1,12 +1,16 @@
-Console.WriteLine("Введите число num1 : = " );
-int num1 = Convert.ToInt16(Console.ReadLine());
-if ((num1 % 2) == 0)
+Console.WriteLine("Введите число N : = " );
+int N = Convert.ToInt32(Console.ReadLine());
+int[] massiv = new int[N];
+int index = 0;
+int Value = 1;
+    for(; index < N;index++,Value++)
 {
-    Console.WriteLine("Четное");
+    massiv[index] = Value;
+    if ((massiv[index] % 2) == 0)
+    {
+    Console.WriteLine(massiv[index]);
+    }
 }
-else
-{
-    Console.WriteLine("Нечетное");
-};
+
 
 
