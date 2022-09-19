@@ -7,3 +7,7 @@ if(result == num2)
 {
     Console.WriteLine("Успех");
 }
+else
+{
+    Console.WriteLine("Не все так гладко как хотелось бы");
+}
