@@ -12,6 +12,6 @@ if(briefly)
 if(!briefly)
 {
     Console.WriteLine("Второе число не кратно первому");
-    result = num2/num1;
+    result = num1%num2;
     Console.WriteLine("Остаток от деления =" + result);
 }
