@@ -18,7 +18,7 @@ sunday = num == 7;
     {
         Console.WriteLine("Да");
     }
-        if(!(saturday|sunday))
+    if(!(saturday|sunday))
     {
         Console.WriteLine("Нет");
     }
