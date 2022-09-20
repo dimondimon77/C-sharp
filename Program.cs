@@ -1,21 +1,25 @@
-// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-// 5 -> 2, 4
-// 8 -> 2, 4, 6, 8
+// 645 -> 5
 
-Console.WriteLine("Введите число N : = " );
-int N = Convert.ToInt32(Console.ReadLine());
-int[] massiv = new int[N];
-int index = 0;
-int Value = 1;
-    for(; index < N;index++,Value++)
-{
-    massiv[index] = Value;
-    if ((massiv[index] % 2) == 0)
+// 78 -> третьей цифры нет
+
+// 32679 -> 6
+
+Console.WriteLine("Введите число число : = " );
+int num = Convert.ToInt32(Console.ReadLine());
+    if(num>=100)
     {
-    Console.WriteLine(massiv[index]);
+    int reduction = num%100;
+    reduction = reduction%10;
+    Console.WriteLine(reduction);
     }
-}
+    else
+    {
+        Console.WriteLine("Вы ввели двухзначное число, и третей цифры нет");
+    }
+
+
 
 
 
