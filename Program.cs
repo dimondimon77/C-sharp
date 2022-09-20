@@ -22,9 +22,3 @@ sunday = num == 7;
     {
         Console.WriteLine("Нет");
     }
-
-
-
-
-
-
