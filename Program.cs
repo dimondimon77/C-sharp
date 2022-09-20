@@ -17,8 +17,3 @@ int num = Convert.ToInt32(Console.ReadLine());
     {
         Console.WriteLine("Вы ввели двухзначное число, и третей цифры нет");
     }
-
-
-
-
-
