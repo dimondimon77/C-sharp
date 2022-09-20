@@ -6,7 +6,7 @@
 
 // 32679 -> 6
 
-Console.WriteLine("Введите число число : = " );
+Console.WriteLine("Введите число : = " );
 int num = Convert.ToInt32(Console.ReadLine());
     if(num>=100)
     {
@@ -17,8 +17,3 @@ int num = Convert.ToInt32(Console.ReadLine());
     {
         Console.WriteLine("Вы ввели двухзначное число, и третей цифры нет");
     }
-
-
-
-
-
