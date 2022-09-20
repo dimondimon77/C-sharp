@@ -17,67 +17,30 @@ int ten2 = 0;
 int count = 0;
 int countTarget = 3;
 int result = 0;
-Boolean parity = true;
-Boolean stop = true;
 temp = num;
-stop = temp>10;
-parity = lenght%2 == 0;
-for(;stop;){
-for(;!parity;lenght++)
-{
-    parity = lenght%2 == 0;
+for(;temp>10;){
     temp = num/ten;
     ten=ten*10;
-    stop = temp>10;
-    Console.WriteLine(temp);
-    Console.WriteLine(ten);
-    if(!stop){
-        lenght2 = lenght;
-        ten2=ten;
-        temp2 =temp;
-        Console.WriteLine(temp);
-        Console.WriteLine(temp2);
-        Console.WriteLine(lenght);
-        return;
-    }
-}
-for(;parity;lenght++)
-{
-    parity = lenght%2 == 0;
-    temp = num/ten;
-    ten=ten*10;
-    stop = temp>10;
    Console.WriteLine(temp);
    Console.WriteLine(ten);
-       if(!stop){
+       if(temp<10){
         lenght2 = lenght;
         ten2=ten;
         temp2 =temp;
         Console.WriteLine(temp);
         Console.WriteLine(temp2);
         Console.WriteLine(lenght);
-        return;
+        break;
         }
     }
-}
-lenght2 = lenght;
-ten2=ten;
-temp2 =temp;
-int[] massiv = new int[lenght];
-    Console.WriteLine(ten2);
-    // Console.WriteLine(massiv[count]);
-    // Console.WriteLine(temp);
-    // Console.WriteLine(count);
-    // Console.WriteLine(massiv.Length);
 while(count<countTarget)
 {
     count++;
-    massiv[count]=temp2;
+    temp2 = temp2*ten2;
     ten2=ten2/10;
     temp2 = num/ten2;
     Console.WriteLine(ten2);
     Console.WriteLine(temp2);
-    Console.WriteLine(massiv[count]);
     Console.WriteLine(count);
 }
 if (count==3)
