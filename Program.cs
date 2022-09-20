@@ -9,8 +9,14 @@
 Console.WriteLine("Введите число : = " );
 int num = Convert.ToInt32(Console.ReadLine());
 int lenght = 1;
+int lenght2 = 0;
 int temp = 0;
+int temp2 =0;
 int ten = 10;
+int ten2 = 0;
+int count = 0;
+int countTarget = 3;
+int result = 0;
 Boolean parity = true;
 Boolean stop = true;
 temp = num;
@@ -26,9 +32,13 @@ for(;!parity;lenght++)
     Console.WriteLine(temp);
     Console.WriteLine(ten);
     if(!stop){
+        lenght2 = lenght;
+        ten2=ten;
+        temp2 =temp;
         Console.WriteLine(temp);
+        Console.WriteLine(temp2);
         Console.WriteLine(lenght);
-        break;
+        return;
     }
 }
 for(;parity;lenght++)
@@ -40,11 +50,40 @@ for(;parity;lenght++)
    Console.WriteLine(temp);
    Console.WriteLine(ten);
        if(!stop){
+        lenght2 = lenght;
+        ten2=ten;
+        temp2 =temp;
         Console.WriteLine(temp);
+        Console.WriteLine(temp2);
         Console.WriteLine(lenght);
-        break;
+        return;
         }
     }
 }
+lenght2 = lenght;
+ten2=ten;
+temp2 =temp;
 int[] massiv = new int[lenght];
-Console.WriteLine(massiv[7]);
+    Console.WriteLine(ten2);
+    // Console.WriteLine(massiv[count]);
+    // Console.WriteLine(temp);
+    // Console.WriteLine(count);
+    // Console.WriteLine(massiv.Length);
+while(count<countTarget)
+{
+    count++;
+    massiv[count]=temp2;
+    ten2=ten2/10;
+    temp2 = num/ten2;
+    Console.WriteLine(ten2);
+    Console.WriteLine(temp2);
+    Console.WriteLine(massiv[count]);
+    Console.WriteLine(count);
+}
+if (count==3)
+{
+    result = temp2%100%10;
+    Console.WriteLine(result);
+}
+
+
