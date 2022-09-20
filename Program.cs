@@ -7,6 +7,5 @@
 
 Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
-int reduction = num%100;
-reduction = reduction%10;
+int reduction = num%100%10;
 Console.WriteLine(reduction);
