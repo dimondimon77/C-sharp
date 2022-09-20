@@ -5,7 +5,7 @@
 // 78 -> третьей цифры нет
 
 // 32679 -> 6
-
+Console.Clear();
 Console.WriteLine("Введите число : = " );
 int num = Convert.ToInt32(Console.ReadLine());
 int temp = 0;
@@ -14,6 +14,11 @@ int count = 0;
 int countTarget = 3;
 int result = 0;
 temp = num;
+if (num<100)
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+else{
 for(;temp>10;){
     temp = num/ten;
     ten=ten*10;
@@ -40,5 +45,4 @@ if (count==3)
     Console.WriteLine(num);
     Console.WriteLine("=" + result);
 }
-
-
+}
