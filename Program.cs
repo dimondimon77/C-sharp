@@ -6,9 +6,8 @@
 
 // 32679 -> 6
 Console.Clear();
-int num = new Random().Next(1, 10000000);
+int num = new Random().Next(1, 1000000);
 int temp = 0;
-int ten = 10;
 int count = 0;
 int countTarget = 3;
 int result = 0;
@@ -18,30 +17,53 @@ if (num<100)
     Console.WriteLine("Третьей цифры нет");
 }
 else{
+void MassivLenght(int temp = 0,int ten = 10,int count = 0){
+    temp = num;
 for(;temp>10;){
+    count++;
     temp = num/ten;
     ten=ten*10;
    Console.WriteLine(temp);
    Console.WriteLine(ten);
        if(temp<10){
-        break;
+        Console.WriteLine("count" + count);
+        return;
         }
     }
-while(count<countTarget)
+}
+MassivLenght(count);
 {
-    count++;
-    temp = temp*ten;
-    ten=ten/10;
-    temp = num/ten;
-    Console.WriteLine(ten);
-    Console.WriteLine(temp);
-    Console.WriteLine(count);
+    Console.WriteLine("count"+ count);
 }
-if (count==3)
+}
+void Massiv(int[] massiv,int i = 0){
+    for (;i<count;i++)
+    {
+        massiv[i]= temp;
+    }
+
+}
+int[] massiv = new int[count];
+Massiv(massiv);
 {
-    result = temp%100%10;
-    Console.Clear();
-    Console.WriteLine(num);
-    Console.WriteLine("=" + result);
+    Console.WriteLine(massiv[2]);
 }
-}
+
+
+// while(count<countTarget)
+// {
+//     count++;
+//     temp = temp*ten;
+//     ten=ten/10;
+//     temp = num/ten;
+//     Console.WriteLine(ten);
+//     Console.WriteLine(temp);
+//     Console.WriteLine(count);
+// }
+// if (count==3)
+// {
+//     result = temp%100%10;
+//     Console.WriteLine(num);
+//     Console.WriteLine("=" + result);
+// }
+// }
