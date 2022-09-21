@@ -6,8 +6,7 @@
 
 // 32679 -> 6
 Console.Clear();
-Console.WriteLine("Введите число : = " );
-int num = Convert.ToInt32(Console.ReadLine());
+int num = new Random().Next(1, 10000000);
 int temp = 0;
 int ten = 10;
 int count = 0;
