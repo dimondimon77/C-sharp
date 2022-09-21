@@ -59,6 +59,6 @@ if (count==countTarget)
 {
     result = temp%100%10;
     Console.WriteLine(num);
-    Console.WriteLine("Искомое число :=" + result);
+    Console.WriteLine("Искомая цифра :=" + result);
 }
 }
