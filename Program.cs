@@ -11,7 +11,7 @@ int temp = 0;
 int ten = 10;
 int ten2 = 10;
 int count = 0;
-int countTarget = 3;
+int countTarget = 6;
 int result = 0;
 int number = 0;
 temp = num;
@@ -37,28 +37,28 @@ while(count<countTarget)
     temp = num/ten;
     number = temp;
     number = number%ten2;
-    // Console.WriteLine("=" +number);
-    if(count==1){
-        number = number%ten2;
-    Console.WriteLine("Первая цифра числа :=" +number);
-    }
-    if(count==2){
-        number = number%ten2;
-    Console.WriteLine("Вторая цифра числа :=" +number);
-    }
-    if(count==3){
-        number = number%ten2;
-    Console.WriteLine("Третья цифра числа :=" +number);
-    }
+    Console.WriteLine("=" +number);
+    // if(count==1){
+    //     number = number%ten2;
+    // Console.WriteLine("Первая цифра числа :=" +number);
+    // }
+    // if(count==2){
+    //     number = number%ten2;
+    // Console.WriteLine("Вторая цифра числа :=" +number);
+    // }
+    // if(count==3){
+    //     number = number%ten2;
+    // Console.WriteLine("Третья цифра числа :=" +number);
+    // }
     // Console.WriteLine(ten);
     // Console.WriteLine(temp);
     // Console.WriteLine(count);
     // Console.WriteLine(n);
 }
-if (count==3)
+if (count==countTarget)
 {
     result = temp%100%10;
     Console.WriteLine(num);
-    Console.WriteLine("Третья цифра числа :=" + result);
+    Console.WriteLine("Искомое число :=" + result);
 }
 }
