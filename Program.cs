@@ -21,4 +21,7 @@ if(!X&!Y)
 Console.WriteLine("Третья плоскость");
 if(X&!Y)
 Console.WriteLine("Четвертая плоскость");
+if (x==0|y==0){
+    Console.WriteLine("X или Y равен нулю");
+}
 
