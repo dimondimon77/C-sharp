@@ -6,12 +6,12 @@
 
 // 32679 -> 6
 Console.Clear();
-int num = new Random().Next(1, 10000000);
+int num = new Random().Next(1, 100000000);
 int temp = 0;
 int ten = 10;
 int ten2 = 10;
 int count = 0;
-int countTarget = 3;
+int countTarget = 4;
 int result = 0;
 int number = 0;
 temp = num;
