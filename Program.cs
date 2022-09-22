@@ -37,7 +37,7 @@ while(count<countTarget)
     temp = num/ten;
     number = temp;
     number = number%ten2;
-    Console.WriteLine(count + "-ая цифра =" +number);
+    Console.WriteLine(count + "-ая цифра =" + number);
     // if(count==1){
     //     number = number%ten2;
     // Console.WriteLine("Первая цифра числа :=" +number);
