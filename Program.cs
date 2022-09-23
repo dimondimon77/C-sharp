@@ -12,10 +12,5 @@ for(;i < massiv.Length;i++)
 {
     int degree = Convert.ToInt32(Math.Pow(i, 3));
     massiv[i] = degree;
-    // Console.WriteLine(ten);
-    // Console.WriteLine(num);
-    // ten2 = ten2 * 10;
-    // massiv[i] = num/ten2;
     Console.WriteLine(massiv[i]);
-    // Console.WriteLine(num);
 }
