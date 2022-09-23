@@ -19,11 +19,10 @@ double B3 = Convert.ToDouble(Console.ReadLine());
 double[] massivA = new double[] {A1, A2, A3};
 double[] massivB = new double[] {B1, B2, B3};
 double d = 0;
-double sum=0;
+double sum = 0;
 for(int i = 0; i < massivA.Length;i++)
 {
-    d = massivB[i] - massivA[i];
-    d = Math.Pow(d,2);
+    d = Math.Pow(massivB[i]-massivA[i],2);
     sum = sum + d;
 }
 Console.WriteLine(Math.Sqrt(sum));
