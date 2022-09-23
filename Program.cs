@@ -1,25 +1,23 @@
-// Задача 18: Напишите программу, которая по заданному номеру четверти, 
-// показывает диапазон возможных координат точек в этой четверти (x и y).
-// 1. = -x и y
-// 2. = x и Y
-// 3. = -x и -Y
-// 4. = x и -Y  
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+// 14212 -> нет
+
+// 12821 -> да
+
+// 23432 -> да
 Console.Clear();
-Console.WriteLine("Введите число num1 : = " );
-Console.WriteLine("Введите число num2 : = " );
-int x = Convert.ToInt16(Console.ReadLine());
-int y = Convert.ToInt16(Console.ReadLine());
-Boolean X=true;
-Boolean Y=true;
-X = x>0;
-Y = y>0;
-if(!X&Y)
-Console.WriteLine("Первая плоскость (Возможные координаты: -32768 : 32767)");
-if(X&Y)
-Console.WriteLine("Вторая плоскость (Возможные координаты: 0 : 32768)");
-if(!X&!Y)
-Console.WriteLine("Третья плоскость (Возможные координаты: -32768 : 0)");
-if(X&!Y)
-Console.WriteLine("Четвертая плоскость (Возможные координаты: -32768 : 32767)");
+// Console.WriteLine("Введите число : = " );
+// int num = Convert.ToInt32(Console.ReadLine());
+int num = new Random().Next(1,99999);
+int[] massiv = new int[5];
+int ten = 1;
+for(int i = 0; i < massiv.Length;i++)
+{
+    ten = ten * 10;
+    massiv[i] = num%ten;
+    Console.WriteLine(massiv[i]);
+    Console.WriteLine(num);
+}
+
 
 
