@@ -12,7 +12,6 @@ int ten = 10;
 int ten2 = 10;
 int count = 0;
 int countTarget = 5;
-int result = 0;
 int number = 0;
 temp = num;
 if (num<100)
@@ -36,8 +35,7 @@ while(count<countTarget)
 }
 if (count==countTarget)
 {
-    result = temp%100%10;
     Console.WriteLine(num);
-    Console.WriteLine("Искомая цифра := " + result);
+    Console.WriteLine("Искомая цифра := " + number);
 }
 }
