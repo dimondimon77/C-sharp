@@ -23,7 +23,7 @@ double sum = 0;
 for(int i = 0; i < massivA.Length;i++)
 {
     d = Math.Pow(massivB[i]-massivA[i],2);
-    sum = sum + d;
+    sum += d;
 }
 Console.WriteLine(Math.Sqrt(sum));
 
