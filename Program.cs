@@ -12,7 +12,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 int[] massiv = new int[5];
 for(int i = 0, ten = 1; i < massiv.Length;i++)
 {
-    ten = ten * 10;
+    ten *= 10;
     massiv[i] = (num%ten)/(ten/10);
 }
 if(massiv[0] == massiv[4] & massiv[1] == massiv[3])
