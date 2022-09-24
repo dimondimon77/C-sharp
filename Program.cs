@@ -6,9 +6,8 @@ Console.Clear();
 Console.WriteLine("Введите число N : = " );
 int N = Convert.ToInt32(Console.ReadLine());
 // int num = new Random().Next(1,99999);
-int[] massiv = new int[N];
-int i = 1;
-for(;i < massiv.Length;i++)
+int[] massiv = new int[N+1];
+for(int i = 1;i < massiv.Length;i++)
 {
     int degree = Convert.ToInt32(Math.Pow(i, 3));
     massiv[i] = degree;
