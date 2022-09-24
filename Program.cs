@@ -10,17 +10,16 @@ Console.WriteLine("Введите число : = " );
 int num = Convert.ToInt32(Console.ReadLine());
 // int num = new Random().Next(12320,12324);
 int[] massiv = new int[5];
-int ten = 1;
-for(int i = 0; i < massiv.Length;i++)
+for(int i = 0, ten = 1; i < massiv.Length;i++)
 {
     ten = ten * 10;
     massiv[i] = (num%ten)/(ten/10);
 }
-    if(massiv[0] == massiv[4] & massiv[1] == massiv[3])
+if(massiv[0] == massiv[4] & massiv[1] == massiv[3])
     {
     Console.WriteLine("Число явялется палиндромом");
     }
-    else
+else
     {
     Console.WriteLine("Число не явялется палиндромом");  
     }
