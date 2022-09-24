@@ -8,11 +8,10 @@
 Console.Clear();
 Console.WriteLine("Введите число : = " );
 int num = Convert.ToInt32(Console.ReadLine());
-// int num = new Random().Next(1,99999);
+// int num = new Random().Next(12320,12324);
 int[] massiv = new int[5];
 int ten = 1;
-int i = 0;
-for(; i < massiv.Length;i++)
+for(int i = 0; i < massiv.Length;i++)
 {
     ten = ten * 10;
     massiv[i] = (num%ten)/(ten/10);
