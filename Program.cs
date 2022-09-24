@@ -11,7 +11,7 @@ int temp = 0;
 int ten = 10;
 int ten2 = 10;
 int count = 0;
-int countTarget = 5;
+int countTarget = 3;
 int number = 0;
 temp = num;
 if (num<100)
