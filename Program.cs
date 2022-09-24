@@ -11,7 +11,7 @@ int temp = 0;
 int ten = 10;
 int ten2 = 10;
 int count = 0;
-int countTarget = 3;
+int countTarget = 5;
 int result = 0;
 int number = 0;
 temp = num;
@@ -20,7 +20,7 @@ if (num<100)
     Console.WriteLine("Третьей цифры нет");
 }
 else{
-while (temp>10){
+while(temp>10){
     temp = num/ten;
     ten *= 10;
 }
