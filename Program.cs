@@ -5,8 +5,7 @@
 Console.WriteLine("Введите число A : = " );
 int A = Convert.ToInt32(Console.ReadLine());
 int[] massiv = new int[A];
-int Value = 1;
-    for(int index = 0,sum = 0; index < A;index++,Value++)
+    for(int index = 0,sum = 0,Value = 1; index < A;index++,Value++)
 {
     sum +=Value;
     massiv[index] = sum;
