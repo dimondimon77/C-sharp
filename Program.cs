@@ -7,10 +7,12 @@ Console.WriteLine("Введите число num : = " );
 int num = Convert.ToInt32(Console.ReadLine());
 int temp = num;
 int ten = 1;
-for(int count = 0;temp>10;){
-    ten *=10;
+int count = 1;
+for(;temp>10;){
+    ten *= 10;
     temp = num/ten;
     count++;
-    Console.WriteLine(count + 1);
+    Console.WriteLine(temp);
 }
+Console.WriteLine(count);
 
