@@ -8,7 +8,7 @@
 
 Console.WriteLine("Введите число : = " );
 String? num = Convert.ToString(Console.ReadLine()); // String? - знак "?" означает что данный тип String допускает значение null или 0
-int sum = num.Where(Char.IsDigit).Sum(c => c - '0'); //Сканирует каждый символ в строке и затем складывает все найденные цифры между собой, Возвращяет Integer
+int sum = num.Where(Char.IsDigit).Sum(c => c - '0'); //Сканирует каждый символ в строке на наличие цифр от 0 до 9 и затем складывает все найденные цифры между собой, Возвращяет Integer
 Console.WriteLine(sum);
 
 // Решение через Математические операции (Only Integer)
