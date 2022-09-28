@@ -1,23 +1,30 @@
-// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-// 3, 5 -> 243 (3⁵)
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
-// 2, 4 -> 16
+// 6, 1, 33 -> [6, 1, 33]
 
-Console.WriteLine("Введите число A : = " );
-int A = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число B : = " );
-int B = Convert.ToInt32(Console.ReadLine());
-//Вот основное правильное решение
-Console.WriteLine("Результат = " + Math.Pow(A,B));
-//Цикл
-int temp = A;
-int i=1;
-int[] massiv = new int[B+1];
-for(; i < B;i++){
-temp *= A;
-massiv[i] = temp;
+int random = new Random().Next(1,11);
+int[] massiv = new int[8];
+void RandomMassiv(int[] collect){
+    for(int i = 0;i<collect.Length;i++){
+        collect[i]= random;
+        random = new Random().Next(1,11);
+    }
 }
-Console.WriteLine("Результат = " + massiv[B-1]);
+void MassivPrint(int[] print){
+        for(int i = 0;i<print.Length;i++){
+        Console.WriteLine(print[i]);
+    }
+}
+RandomMassiv(massiv);
+MassivPrint(massiv);
+// Вариант без функций
+// int random1 = new Random().Next(1,11);
+// for(int i = 0;i<massiv.Length;i++){
+//         random1 = new Random().Next(1,11);
+//         massiv[i] = random1;
+//         Console.WriteLine(massiv[i]);
+//     }
 
 
