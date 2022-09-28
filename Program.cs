@@ -8,10 +8,7 @@
 
 Console.WriteLine("Введите число : = " );
 String? num = Convert.ToString(Console.ReadLine());
-int sum = 0;
-for(int i = 0;i<num.Length;i++){
-    sum = num.Where(Char.IsDigit).Sum(c => c - '0'); // Складывает только цифры из стоки типа String 
-}
+int sum = num.Where(Char.IsDigit).Sum(c => c - '0');
 Console.WriteLine(sum);
 
 // Решение через Математические операции (Only Integer)
