@@ -1,23 +1,30 @@
-// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-// 3, 5 -> 243 (3⁵)
+// 452 -> 11
 
-// 2, 4 -> 16
+// 82 -> 10
 
-Console.WriteLine("Введите число A : = " );
-int A = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число B : = " );
-int B = Convert.ToInt32(Console.ReadLine());
-//Вот основное правильное решение
-Console.WriteLine("Результат = " + Math.Pow(A,B));
-//Цикл
-int temp = A;
-int i=1;
-int[] massiv = new int[B+1];
-for(; i < B;i++){
-temp *= A;
-massiv[i] = temp;
+// 9012 -> 12
+
+Console.WriteLine("Введите число : = " );
+int num = Convert.ToInt32(Console.ReadLine());
+int ten = 1;
+int temp = 0;
+int i = 0;
+temp = num;
+for(; i < temp;i++){
+ten *= 10;    
+temp /= ten;
 }
-Console.WriteLine("Результат = " + massiv[B-1]);
+int[] massiv = new int[i];
+massiv[0]=temp;
+for(i = 1;i<massiv.Length;i++){
+    ten /= 10;
+    temp *= ten;
+    massiv[i] = temp;
+    Console.WriteLine(temp);
+Console.WriteLine("Результат = " + massiv[i]);
+}
+
 
 
