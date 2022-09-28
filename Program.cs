@@ -8,23 +8,27 @@
 
 Console.WriteLine("Введите число : = " );
 int num = Convert.ToInt32(Console.ReadLine());
-int ten = 1;
 int temp = 0;
-int i = 0;
+int ten = 10;
+int count = 0;
+int i = -1;
+int number = 0;
+int result = 0;
 temp = num;
-for(; i < temp;i++){
-ten *= 10;    
-temp /= ten;
+while(temp>10){
+    temp = num/ten;
+    ten *= 10;
+    count++;
 }
-int[] massiv = new int[i];
-massiv[0]=temp;
-for(i = 1;i<massiv.Length;i++){
-    ten /= 10;
+while(i<count)
+{
+    i++;
     temp *= ten;
-    massiv[i] = temp;
-    Console.WriteLine(temp);
-Console.WriteLine("Результат = " + massiv[i]);
+    ten /= 10;
+    temp = num/ten;
+    number = temp;
+    number %= 10;
+    result += number;
 }
-
-
+Console.WriteLine(result);
 
