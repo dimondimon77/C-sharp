@@ -2,12 +2,19 @@
 
 // [345, 897, 568, 234] -> 2
 
-int random = new Random().Next(1,11);
-int[] massiv = new int[random];
+int Length = new Random().Next(4,10);
+int[] massiv = new int[Length];
 void RandomMassiv(int[] collect){
+    int random = 0;
     for(int i = 0;i<collect.Length;i++){
-        collect[i]= random;
-        random = new Random().Next(1,11);
+        random = new Random().Next(1,999);
+        collect[i] = random;
+    }
+}
+void ScanParity(int[] scan){
+    int count = 0;
+    for(int i = 0;i<scan.Length;i++){
+        int sum = num.Where(Char.IsDigit).Sum(c => c - '0');
     }
 }
 void MassivPrint(int[] print){
