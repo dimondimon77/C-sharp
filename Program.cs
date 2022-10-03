@@ -7,7 +7,7 @@
 int Length = new Random().Next(3,11);
 int[] massiv = new int[Length];
 int sum = 0;
-void RandomMassiv(int[] collect){ //Создаем функцию которая заполняет массив, рандомными числами
+void RandomMassiv(int[] collect){
     int random = 0;
     for(int i = 0;i<collect.Length;i++){
         random = new Random().Next(1,101);
