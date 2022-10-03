@@ -1,14 +1,16 @@
-// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
-// [345, 897, 568, 234] -> 2
+// [3, 7, 23, 12] -> 19
 
-int Length = new Random().Next(4,10);
+// [-4, -6, 89, 6] -> 0
+
+int Length = new Random().Next(3,11);
 int[] massiv = new int[Length];
-int count = 0;
+int sum = 0;
 void RandomMassiv(int[] collect){ //Создаем функцию которая заполняет массив, рандомными числами
     int random = 0;
     for(int i = 0;i<collect.Length;i++){
-        random = new Random().Next(100,999);
+        random = new Random().Next(1,101);
         collect[i] = random;
     }
 }
@@ -17,17 +19,19 @@ void PrintMassiv(int[] print){
         Console.WriteLine(print[i]);
     }
 }
-void ParitySum(int[] scan){
+void NonParitySum(int[] scan){
     for(int i = 0;i<scan.Length;i++){
         if(scan[i]%2==0){
-            count++;
+        }
+        else{
+        sum += scan[i];
         }
     }
 }
 RandomMassiv(massiv);
 PrintMassiv(massiv);
-ParitySum(massiv);
-Console.WriteLine("Количество четных чисел = " + count);
+NonParitySum(massiv);
+Console.WriteLine("Сумма нечетных чисел = " + sum);
 // // BOUNUS
 // // Программа которая выводит количество четных цифр во всем массиве
 // int Length = new Random().Next(4,10);
