@@ -4,29 +4,14 @@
 
 // ❗ **Теорема о неравенстве треугольника:** каждая сторона треугольника меньше суммы двух других сторон.
 
-
-int[] massiv = new int[Length];
-int obratka = 0;
-void RandomMassiv(int[] collect){
-    int random = 0;
-    for(int i = 0;i<collect.Length;i++){
-        random = new Random().Next(1,101);
-        collect[i] = random;
-    }
-}
-void PrintMassiv(int[] print){
-    for(int i = 0; i<print.Length;i++){
-        Console.WriteLine(print[i]);
-    }
-}
-void Obratka(int[] scan){
-    obratka = scan.Length;
-    int i = 0;
-    for(;obratka<1;obratka--,i++){
-        scan[obratka-i]=scan[i];
-    }
-}
-RandomMassiv(massiv);
-PrintMassiv(massiv);
-Obratka(massiv);
-PrintMassiv(massiv);
+Console.WriteLine("Введите число num1 : = " );
+Console.WriteLine("Введите число num2 : = " );
+Console.WriteLine("Введите число num3 : = " );
+int num1 = Convert.ToInt16(Console.ReadLine());
+int num2 = Convert.ToInt16(Console.ReadLine());
+int num3 = Convert.ToInt16(Console.ReadLine());;
+if(num1<=num2+num3){Console.WriteLine("Треугольник может существовать");}
+else if(num2<=num1+num3){Console.WriteLine("Треугольник может существовать");}
+else if(num3<=num1+num2){Console.WriteLine("Треугольник может существовать");}
+else if(num1>num2+num3 & num2>num1+num3 & num3>num1+num2)
+{Console.WriteLine("Треугольник не может существовать");}
