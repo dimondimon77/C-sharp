@@ -6,3 +6,13 @@
 
 // 2 -> 10
 
+Console.Clear();
+int num = new Random().Next(3,62);
+int temp = 0;
+int result = 0;
+int ostatok = 0;
+temp = num/2;
+for(int i = 0;i<temp;i++){
+ostatok = (num/2)%2;
+result += ostatok;
+}
