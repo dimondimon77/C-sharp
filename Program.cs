@@ -1,10 +1,12 @@
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 // [3 7 22 2 78] -> 76
-
+Console.Clear();
 int Length = new Random().Next(3,11);
 int[] massiv = new int[Length];
 int sum = 0;
+int min = 0;
+int max = 0;
 void RandomMassiv(int[] collect){
     int random = 0;
     for(int i = 0;i<collect.Length;i++){
@@ -18,7 +20,9 @@ void PrintMassiv(int[] print){
     }
 }
 void SumBetweenMinMax(int[] scan){
-    for(int i = 0, min = scan[0], max = scan[0];i<scan.Length;i++){
+    min = scan[0];
+    max = scan[0];
+    for(int i = 0;i<scan.Length;i++){
         if(scan[i]<min){
             min = scan[i];
         }
@@ -31,4 +35,4 @@ void SumBetweenMinMax(int[] scan){
 RandomMassiv(massiv);
 PrintMassiv(massiv);
 SumBetweenMinMax(massiv);
-Console.WriteLine("Сумма чисел между min и max = " + sum);
+Console.WriteLine($"Сумма чисел между min и max = {max} - {min} = {sum} " );
