@@ -35,4 +35,4 @@ void SumBetweenMinMax(int[] scan){
 RandomMassiv(massiv);
 PrintMassiv(massiv);
 SumBetweenMinMax(massiv);
-Console.WriteLine($"Сумма чисел между min и max = {max} - {min} = {sum} " );
+Console.WriteLine($"Разница между min и max = {max} - {min} = {sum} " );
