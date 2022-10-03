@@ -1,8 +1,6 @@
-// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-// [3, 7, 23, 12] -> 19
-
-// [-4, -6, 89, 6] -> 0
+// [3 7 22 2 78] -> 76
 
 int Length = new Random().Next(3,11);
 int[] massiv = new int[Length];
@@ -19,16 +17,18 @@ void PrintMassiv(int[] print){
         Console.WriteLine(print[i]);
     }
 }
-void NonParitySum(int[] scan){
-    for(int i = 0;i<scan.Length;i++){
-        if(scan[i]%2==0){
+void SumBetweenMinMax(int[] scan){
+    for(int i = 0, min = scan[0], max = scan[0];i<scan.Length;i++){
+        if(scan[i]<min){
+            min = scan[i];
         }
-        else{
-        sum += scan[i];
+        if(scan[i]>max){
+            max = scan[i];
         }
+        sum = max - min;
     }
 }
 RandomMassiv(massiv);
 PrintMassiv(massiv);
-NonParitySum(massiv);
-Console.WriteLine("Сумма нечетных чисел = " + sum);
+SumBetweenMinMax(massiv);
+Console.WriteLine("Сумма чисел между min и max = " + sum);
