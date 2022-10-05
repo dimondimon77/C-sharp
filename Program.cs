@@ -7,13 +7,12 @@
 // 2 -> 10
 
 Console.Clear();
-int num = new Random().Next(15,95);
-int ostatok = 0;
+int num = new Random().Next(10,15);
 int temp = num; 
 int count = 0;
 int minus = 0;
 int[] massiv = new int[40];
-for(int i = 0;temp>0;i++,count++){
+for(int i = 0,ostatok = 0;temp>0;i++,count++){
 ostatok = temp%2;
 temp /=2;
 massiv[i] = ostatok;
