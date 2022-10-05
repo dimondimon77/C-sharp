@@ -13,7 +13,7 @@ Console.WriteLine("Введите число k2 : = " );
 int k2 = Convert.ToInt16(Console.ReadLine());
 double x = -10;
 for(double y1 = 0, y2 = 0; x<10 ;){
-    x += 0.1;
+    x += 0.5;
     y1=k1*x+b1;
     y2=k2*x+b2;
     if(y1==y2){
