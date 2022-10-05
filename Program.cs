@@ -1,24 +1,16 @@
-// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
-// 0, 7, 8, -2, -2 -> 2
-
-// 1, -7, 567, 89, 223-> 3
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 Console.WriteLine("Введите число 1 : = " );
-int num1 = Convert.ToInt16(Console.ReadLine());
+int b1 = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число 2 : = " );
-int num2 = Convert.ToInt16(Console.ReadLine());
+int k1 = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число 3 : = " );
-int num3 = Convert.ToInt16(Console.ReadLine());
+int b2 = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число 4 : = " );
-int num4 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Введите число 5 : = " );
-int num5 = Convert.ToInt16(Console.ReadLine());
-int[] massiv = new int[]{num1,num2,num3,num4,num5};
-int M = 0;
-for(int i = 0;i<massiv.Length;i++){
-    if(massiv[i]>0){
-        M++;
-    }
-}
-Console.WriteLine("Количество чисел больше нуля = " + M);
+int k2 = Convert.ToInt16(Console.ReadLine());
+int x = 0;
+Console.WriteLine($"y1 = {k1*x+b1}");
+Console.WriteLine($"y2 = {k2*x+b2}");
