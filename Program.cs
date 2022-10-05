@@ -20,5 +20,7 @@ for(double y1 = 0, y2 = 0; x<10 ;){
         Console.WriteLine($"Пересечение прямых достигнуто в точке = {y1} {y2}");
         break;
     }
+    if (x == 10){
+    Console.WriteLine("Прямые не разу не пересеклись");
+    }
 }
-Console.WriteLine("Прямые не пересекаются");
