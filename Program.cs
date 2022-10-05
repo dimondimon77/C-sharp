@@ -21,3 +21,4 @@ for(double y1 = 0, y2 = 0; x<10 ;){
         break;
     }
 }
+Console.WriteLine("Прямые не пересекаются");
