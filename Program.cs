@@ -11,6 +11,15 @@ Console.WriteLine("Введите число 3 : = " );
 int b2 = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число 4 : = " );
 int k2 = Convert.ToInt16(Console.ReadLine());
-int x = 0;
-Console.WriteLine($"y1 = {k1*x+b1}");
-Console.WriteLine($"y2 = {k2*x+b2}");
+double x = -10;
+double y1 = 0;
+double y2 = 0;
+for(; x<10;){
+    x += 0.5;
+    y1=k1*x+b1;
+    y2=k2*x+b2;
+    if(y1==y2){
+        Console.WriteLine($"Пересечение прямых достигнуто в точке = {y1} {y2}");
+        break;
+    }
+}
