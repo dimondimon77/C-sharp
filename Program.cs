@@ -5,47 +5,33 @@
 // 77 3 8 1
 
 Console.Clear();
-void RandomMassiv(){
-int Length0 = new Random().Next(3,11);
-int Length1 = new Random().Next(3,11);
-    int[,] massiv = new int[Length0,Length1];
-    int random = 0;
-    for(int i = 0;i<massiv.GetLength(0);i++){
-        random = new Random().Next(1,101);
-        massiv[i,0] = random;
-         for(int j = 0;j<massiv.GetLength(1);j++){
-        random = new Random().Next(1,101);
-        massiv[0,j] = random;
-    }      
-    }
-}
-RandomMassiv();
-
-
-
-
-
-
-
-void PrintMassiv(int[] print){
-    for(int i = 0; i<print.Length;i++){
-        Console.WriteLine(print[i]);
-    }
-}
-void SumBetweenMinMax(int[] scan){
-    min = scan[0];
-    max = scan[0];
-    for(int i = 0;i<scan.Length;i++){
-        if(scan[i]<min){
-            min = scan[i];
+int Lenght0 = new Random().Next(3,10);
+int Lenght1 = new Random().Next(3,10);
+int[,] massiv = new int[Lenght0, Lenght1];
+int[,] RandomMassiv(int[,] array)
+{
+    array = new int[Lenght0, Lenght1];
+    for (int i = 0; i < Lenght0; i++)
+    {
+        for (int j = 0; j < Lenght1; j++)
+        {
+            array[i, j] = new Random().Next(1, 10);// [1; 10)
         }
-        if(scan[i]>max){
-            max = scan[i];
+    }
+    return array;
+}
+
+void PrintMassiv(int[,] print)
+{
+    for (int i = 0; i < print.GetLength(0); i++)
+    {
+        for (int j = 0; j < print.GetLength(1); j++)
+        {
+            Console.Write($"{print[i, j]} ");
         }
-        sum = max - min;
+        Console.WriteLine();
     }
 }
 RandomMassiv(massiv);
 PrintMassiv(massiv);
-SumBetweenMinMax(massiv);
-Console.WriteLine($"Разница между min и max = {max} - {min} = {sum} " );
+
