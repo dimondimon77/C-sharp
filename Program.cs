@@ -12,10 +12,10 @@ int Length1 = new Random().Next(3,11);
     int random = 0;
     for(int i = 0;i<massiv.GetLength(0);i++){
         random = new Random().Next(1,101);
-        massiv[i] = random;
+        massiv[i,0] = random;
          for(int j = 0;j<massiv.GetLength(1);j++){
         random = new Random().Next(1,101);
-        massiv[j] = random;
+        massiv[0,j] = random;
     }      
     }
 }
