@@ -8,19 +8,16 @@ Console.Clear();
 int Lenght0 = new Random().Next(3,10);
 int Lenght1 = new Random().Next(3,10);
 int[,] massiv = new int[Lenght0, Lenght1];
-int[,] RandomMassiv(int[,] array)
+void RandomMassiv(int[,] array)
 {
-    array = new int[Lenght0, Lenght1];
     for (int i = 0; i < Lenght0; i++)
     {
         for (int j = 0; j < Lenght1; j++)
         {
-            array[i, j] = new Random().Next(1, 10);// [1; 10)
+            array[i, j] = new Random().Next(1, 10);
         }
     }
-    return array;
 }
-
 void PrintMassiv(int[,] print)
 {
     for (int i = 0; i < print.GetLength(0); i++)
