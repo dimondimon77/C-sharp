@@ -1,19 +1,32 @@
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// Задача 46: Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// m = 3, n = 4.
+// 1 4 8 19
+// 5 -2 33 -2
+// 77 3 8 1
 
-// [3 7 22 2 78] -> 76
 Console.Clear();
-int Length = new Random().Next(3,11);
-int[] massiv = new int[Length];
-int sum = 0;
-int min = 0;
-int max = 0;
-void RandomMassiv(int[] collect){
+void RandomMassiv(){
+int Length0 = new Random().Next(3,11);
+int Length1 = new Random().Next(3,11);
+    int[,] massiv = new int[Length0,Length1];
     int random = 0;
-    for(int i = 0;i<collect.Length;i++){
+    for(int i = 0;i<massiv.GetLength(0);i++){
         random = new Random().Next(1,101);
-        collect[i] = random;
+        massiv[i] = random;
+         for(int j = 0;j<massiv.GetLength(1);j++){
+        random = new Random().Next(1,101);
+        massiv[j] = random;
+    }      
     }
 }
+RandomMassiv();
+
+
+
+
+
+
+
 void PrintMassiv(int[] print){
     for(int i = 0; i<print.Length;i++){
         Console.WriteLine(print[i]);
