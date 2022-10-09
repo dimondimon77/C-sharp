@@ -1,25 +1,37 @@
-// Необходимо найти  5 целых чисел (положительных), 
-// которые будут удовлетворять такому условию
-// x^5 + y^5 + z^5 + q^5 = w^5
-// Т.е. сумма 4 чисел в пятой степени = 5 числу
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
+// m = 3, n = 4.
 
-int one = 1;
-int two = 1;
-int three = 1;
-int four = 1;
-int sum = 0;
-for(int i = 0; i < 15;i++,one++,two++,three++,four++)
+// 0,5 7 -2 -0,2
+
+// 1 -3,3 8 -9,9
+
+// 8 7,8 -7,1 9
+
+Console.Clear();
+double[,] massiv = new double[3, 4];
+void RandomMassiv(double[,] array)
 {
-    one = one*one*one*one*one;
-    two = two*two*two*two*two;
-    three = three*three*three*three*three;
-    four = four*four*four*four*four;
-    sum = one + two + three + four; 
-    Math.Sqrt(Math.Sqrt(Math.Sqrt(Math.Sqrt(Math.Sqrt(sum)))));
+    for (int i = 0; i < massiv.GetLength(0); i++)
+    {
+        for (int j = 0; j < massiv.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(-10,10) + new Random().NextDouble();
+            array[i, j] = Math.Round(array[i, j],1);
+        }
+    }
 }
-double proverka = 7776;
-int stepen = 5;
-double res = 0;
-res = Math.Pow(proverka,-5);
-Console.WriteLine(res);
+void PrintMassiv(double[,] print)
+{
+    for (int i = 0; i < print.GetLength(0); i++)
+    {
+        for (int j = 0; j < print.GetLength(1); j++)
+        {
+            Console.Write($"{print[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+RandomMassiv(massiv);
+PrintMassiv(massiv);
+
