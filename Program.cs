@@ -7,39 +7,31 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 Console.Clear();
-Console.WriteLine("Введите позицию элемента");
-int position = Convert.ToInt32(Console.ReadLine());
-int Lenght0 = new Random().Next(4,10);
-int Lenght1 = new Random().Next(4,10);
+int Lenght0 = new Random().Next(3,5);
+int Lenght1 = new Random().Next(3,5);
 int[,] massiv = new int[Lenght0, Lenght1];
 void RandomMassiv(int[,] array)
 {
-    for (int i = 0; i < massiv.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = new Random().Next(9,62);
         }
     }
 }
-void AverageSumColumn(int[,] scan)
+void AverageSumColumn(int[,] avarageSum)
 {
-    int count = 0;
-        for (int i = 0; i < massiv.GetLength(0); i++)
+    int Sum = 0;
+    for(int i = 0; i < avarageSum.GetLength(1);i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++, count++)
+        for (int j = 0; j < avarageSum.GetLength(1); j++)
         {
-           if(count == position)
-           {
-            Console.WriteLine($"Позиция элемента({position}) = {scan[i, j-1]}      Строка = {i+1} Столбец = {j}");
-            return;
-           }
-        }
-    }
-    if(position > count)
-    {
-        Console.WriteLine($"Позиция элемента({position}) = Такого эелемента нет в массиве");
-        return;
+            Sum += avarageSum[j,i];
+        }       
+        Sum = Sum/3; 
+        Console.WriteLine($"Ср. Арифм. столбец ({i+1}) = {Sum}");
+        Sum = 0;
     }
 }
 void PrintMassiv(int[,] print)
@@ -55,5 +47,5 @@ void PrintMassiv(int[,] print)
 }
 RandomMassiv(massiv);
 PrintMassiv(massiv);
-ScanPosition(massiv,position);
+AverageSumColumn(massiv);
 
