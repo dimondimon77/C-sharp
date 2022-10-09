@@ -36,7 +36,7 @@ void ScanPosition(int[,] scan, int position)
         {
            if(count == position)
            {
-            Console.WriteLine($"Позиция элемента({position}) = {scan[i, j-1]}");
+            Console.WriteLine($"Позиция элемента({position}) = {scan[i, j-1]}      Строка = {i+1} Столбец = {j}");
             return;
            }
         }
