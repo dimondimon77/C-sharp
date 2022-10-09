@@ -19,9 +19,9 @@ int Lenght1 = new Random().Next(4,10);
 int[,] massiv = new int[Lenght0, Lenght1];
 void RandomMassiv(int[,] array)
 {
-    for (int i = 0; i < massiv.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = new Random().Next(9,62);
         }
@@ -30,9 +30,9 @@ void RandomMassiv(int[,] array)
 void ScanPosition(int[,] scan, int position)
 {
     int count = 0;
-        for (int i = 0; i < massiv.GetLength(0); i++)
+        for (int i = 0; i < scan.GetLength(0); i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++, count++)
+        for (int j = 0; j < scan.GetLength(1); j++, count++)
         {
            if(count == position)
            {
