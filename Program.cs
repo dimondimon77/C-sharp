@@ -27,7 +27,7 @@ void PrintMassiv(double[,] print)
     {
         for (int j = 0; j < print.GetLength(1); j++)
         {
-            Console.Write($"{print[i, j]} ");
+            Console.Write($"[{print[i, j]}] ");
         }
         Console.WriteLine();
     }
