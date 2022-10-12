@@ -14,9 +14,9 @@ int Lenght1 = new Random().Next(3, 10);
 int[,] massiv = new int[Lenght0, Lenght1];
 void RandomMassiv(int[,] array)
 {
-    for (int i = 0; i < Lenght0; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < Lenght1; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = new Random().Next(1, 10);
         }
