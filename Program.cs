@@ -42,13 +42,13 @@ void SumLine(int[,] sumMassiv)
         Console.WriteLine(sum);
         sum = 0;
     }
-    for(int k=0; k<compare.Length;k++){
+      for (int k = 0; k < compare.Length; k++) {
         min = compare[0];
-        if(min>compare[k]){
-            min = compare[k];
-            indexMin = k;
-        }
-    }
+            if (min < compare[k]) {
+                    min = compare[k];
+                    indexMin = k;
+                }
+            }
     Console.WriteLine($"Сумма элементов наименьшой строки = {min}, это строка под номером ({indexMin+1})");
 }
 void PrintMassiv(int[,] print)
