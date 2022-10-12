@@ -1,41 +1,55 @@
-// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+
 // Например, задан массив:
+
 // 1 4 7 2
+
 // 5 9 2 3
+
 // 8 4 2 4
-// В итоге получается вот такой массив:
-// 7 4 2 1
-// 9 5 3 2
-// 8 4 4 2
+
+// 5 2 6 7
+
+// Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 Console.Clear();
-int Lenght0 = new Random().Next(3, 10);
-int Lenght1 = new Random().Next(3, 10);
+int Lenght0 = new Random().Next(4, 6);
+int Lenght1 = new Random().Next(5, 8);
 int[,] massiv = new int[Lenght0, Lenght1];
 void RandomMassiv(int[,] array)
 {
-    for (int i = 0; i < Lenght0; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < Lenght1; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = new Random().Next(1, 10);
         }
     }
 }
-void SortedMassiv(int[,] sort)
+void SumLine(int[,] sumMassiv)
 {
-    for (int i = 0; i < sort.GetLength(0); i++)
+    int sum = 0;
+    int min = 0;
+    int indexMin = 0;
+    int[] compare = new int[sumMassiv.GetLength(1)];
+    for (int i = 0; i < sumMassiv.GetLength(0); i++)
     {
-        for (int j = 0,temp = 0; j < sort.GetLength(1); j++)
+        for (int j = 0; j < sumMassiv.GetLength(1); j++)
         {
-            if (sort[i,j] < sort[i,j + 1]) {
-                temp = sort[i,j];
-                sort[i,j] = sort[i,j + 1];
-                sort[i,j + 1] = temp;
-            if(j==sort.GetLength(1)-2) return;
+        sum += sumMassiv[i,j];
+        }
+        compare[i] = sum;
+        Console.WriteLine(sum);
+        sum = 0;
+    }
+    for(int k=0; k<compare.Length;k++){
+        min = compare[0];
+        if(min>compare[k]){
+            min = compare[k];
+            indexMin = k;
         }
     }
-}
+    Console.WriteLine($"Сумма элементов наименьшой строки = {min}, это строка под номером ({indexMin+1})");
 }
 void PrintMassiv(int[,] print)
 {
@@ -51,7 +65,7 @@ void PrintMassiv(int[,] print)
 }
 RandomMassiv(massiv);
 PrintMassiv(massiv);
-SortedMassiv(massiv);
-PrintMassiv(massiv);
+SumLine(massiv);
+
 
 
