@@ -7,7 +7,11 @@
 
 Console.Clear();
 int[,] massiv = new int[4, 4];
-void FillArray(int[,] fill, int x , int y){
+void FillArray(int[,] fill){
+    int oneStep = 0;
+    int twoStep = 0;
+    int threeStep = 0;
+    int fourStep = 0;
     for (int i =0; i < x; i++)
     {
     for (int j = 0; j < y; j++)
@@ -31,10 +35,7 @@ void PrintMassiv(int[,] print)
     }
     Console.WriteLine();
 }
-FillArray(massiv,4,0);
-FillArray(massiv,0,4);
-FillArray(massiv,4,0);
-FillArray(massiv,0,4);
+FillArray(massiv);
 PrintMassiv(massiv);
 
 
