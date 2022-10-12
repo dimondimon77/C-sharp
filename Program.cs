@@ -28,15 +28,11 @@ void SortedMassiv(int[,] sort)
     {
         for (int j = 0,temp = 0; j < sort.GetLength(1); j++)
         {
-            if (sort[i,j] < sort[i,j + 1]) {
-                temp = sort[i,j];
-                sort[i,j] = sort[i,j + 1];
-                sort[i,j + 1] = temp;
-            if(j==sort.GetLength(1)-2) return;
+            
         }
     }
 }
-}
+
 void PrintMassiv(int[,] print)
 {
     for (int i = 0; i < print.GetLength(0); i++)
