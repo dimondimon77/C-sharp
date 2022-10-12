@@ -29,14 +29,14 @@ void FillArray(int[,] fill, int x, int y, int fillX, int fillY)
             {
                 for (int i = Math.Abs(fillX); i > 0; i--,count++)
                 {
-                    fill[i, y-1] = count;
+                    fill[i, y - 1] = count;
                 }
             }
             if (fillY < 0)
             {
                 for (int i = Math.Abs(fillY); i > 0; i--,count++)
                 {
-                    fill[x - 1,i-1] = count;
+                    fill[x - 1,i - 1] = count;
                 }
             }
 }
@@ -58,6 +58,7 @@ FillArray(massiv, 0, 4, 4, 0);
 FillArray(massiv, 4, 4, 0, -4);
 FillArray(massiv, 4, 1, -2, 0);
 FillArray(massiv, 2, 1, 0, 3);
+FillArray(massiv, 3, 4, 1, 0);
 PrintMassiv(massiv);
 Console.WriteLine(count);
 
