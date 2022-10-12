@@ -1,53 +1,21 @@
-// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// В итоге получается вот такой массив:
-// 7 4 2 1
-// 9 5 3 2
-// 8 4 4 2
+// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
 
 Console.Clear();
 int Lenght0 = new Random().Next(3, 10);
 int Lenght1 = new Random().Next(3, 10);
-int[,] massiv = new int[Lenght0, Lenght1];
-void RandomMassiv(int[,] array)
-{
-    for (int i = 0; i < Lenght0; i++)
-    {
-        for (int j = 0; j < Lenght1; j++)
-        {
-            array[i, j] = new Random().Next(1, 10);
-        }
-    }
+int[,] massiv = new int[3, 4];
+int[,] massiv2 = new int[3, 4];
+for (j = 0; j < 4; j++) {
+    massiv[i, j] = m1[i, j] * m2[i, j];
+    Console.Write(m1[i, j]);
+    Console.WriteLine("\n");
 }
-void SortedMassiv(int[,] sort)
-{
-    for (int i = 0; i < sort.GetLength(0); i++)
-    {
-        for (int j = 0,temp = 0; j < sort.GetLength(1); j++)
-        {
-            
-        }
-    }
-}
-
-void PrintMassiv(int[,] print)
-{
-    for (int i = 0; i < print.GetLength(0); i++)
-    {
-        for (int j = 0; j < print.GetLength(1); j++)
-        {
-            Console.Write($"{print[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
-RandomMassiv(massiv);
-PrintMassiv(massiv);
-SortedMassiv(massiv);
-PrintMassiv(massiv);
+for
 
 
