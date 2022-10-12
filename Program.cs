@@ -1,54 +1,44 @@
-// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
-// Например, даны 2 матрицы:
-// 2 4 | 3 4
-// 3 2 | 3 3
-// Результирующая матрица будет:
-// 18 20
-// 15 18
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
 
 Console.Clear();
-int Lenght0 = new Random().Next(3, 10);
-int Lenght1 = new Random().Next(3, 10);
-int[,] massiv1 = new int[Lenght0, Lenght1];
-int[,] massiv2 = new int[Lenght0, Lenght1];
-int[,] matrixMultiply = new int[massiv1.GetLength(0), massiv1.GetLength(1)];
-void RandomMassiv(int[,] array)
+int[,,] matrix = new int[2, 2, 2];
+void RandomMatrix(int[,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 10);
-        }
-    }
-}
-void MultiplyMatrix(int[,] array1, int[,] array2)
-{
-    for (int i = 0; i < array1.GetLength(0); i++)
-    {
-        for (int j = 0; j < array1.GetLength(1); j++)
+        for (int k = 0; k < array.GetLength(2); k++)
         {
-            matrixMultiply[i, j] = array1[i, j] * array2[i, j];
+        array[i,j,k] = new Random((int)(DateTime.Now.Ticks)).Next(12, 56);  
+        // генерация случайных чисел происходит по четкому математическому алгоритму.
+        // эта переменная дается алгоритму для генерации, а посколько DateTime.Now.Ticks это 1/1000 секунды 
+        // то это делает маловероятным тот факт что милисекунды двух генераций совпадут.
+        }
         }
     }
 }
-void PrintMassiv(int[,] print)
+void PrintMatrix(int[,,] print)
 {
     for (int i = 0; i < print.GetLength(0); i++)
     {
         for (int j = 0; j < print.GetLength(1); j++)
         {
-            Console.Write($"{print[i, j]} ");
+        for (int k = 0; k < print.GetLength(2); k++)
+        {
+        Console.Write($"{print[i,j,k]}({i}:{j}:{k}) ");
+        }
         }
         Console.WriteLine();
     }
     Console.WriteLine();
 }
-RandomMassiv(massiv1);
-RandomMassiv(massiv2);
-MultiplyMatrix(massiv1, massiv2);
-PrintMassiv(massiv1);
-PrintMassiv(massiv2);
-PrintMassiv(matrixMultiply);
+RandomMatrix(matrix);
+PrintMatrix(matrix);
 
 
