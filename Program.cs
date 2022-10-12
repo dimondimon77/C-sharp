@@ -11,11 +11,15 @@ int Lenght0 = new Random().Next(3, 10);
 int Lenght1 = new Random().Next(3, 10);
 int[,] massiv = new int[3, 4];
 int[,] massiv2 = new int[3, 4];
-for (j = 0; j < 4; j++) {
-    massiv[i, j] = m1[i, j] * m2[i, j];
-    Console.Write(m1[i, j]);
-    Console.WriteLine("\n");
+{
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            massiv[i, j] = massiv[i, j] * massiv2[i, j];
+            Console.WriteLine(massiv[i,j]);
+        }
+    }
 }
-for
 
 
