@@ -26,12 +26,13 @@ void RandomMassiv(int[,] array)
         }
     }
 }
-void SumLine(int[,] sumMassiv)
+void SumLine(int[,] sumMassiv)  // Функция которая складывает сумму каждой строки, а затем кладет результат в массив. 
+                                // Далее значения в новом массиве сравниваются между собой и вычисляется меньшая сумма
 {
     int sum = 0;
     int min = 0;
     int indexMin = 0;
-    int[] compare = new int[sumMassiv.GetLength(1)];
+    int[] compare = new int[sumMassiv.GetLength(0)];
     for (int i = 0; i < sumMassiv.GetLength(0); i++)
     {
         for (int j = 0; j < sumMassiv.GetLength(1); j++)
@@ -39,17 +40,19 @@ void SumLine(int[,] sumMassiv)
         sum += sumMassiv[i,j];
         }
         compare[i] = sum;
-        Console.WriteLine(sum);
         sum = 0;
     }
-      for (int k = 0; k < compare.Length; k++) {
-        min = compare[0];
-            if (min < compare[k]) {
-                    min = compare[k];
-                    indexMin = k;
-                }
-            }
-    Console.WriteLine($"Сумма элементов наименьшой строки = {min}, это строка под номером ({indexMin+1})");
+    min = compare[0];
+    for (int k = 0; k < compare.Length; k++)
+    {
+        Console.WriteLine(compare[k]);
+        if (compare[k] < min)
+        {
+            min = compare[k];
+            indexMin = k;
+        }
+    }
+    Console.WriteLine($"Сумма элементов наименьшой строки = {min}, это строка под номером ({indexMin + 1})");
 }
 void PrintMassiv(int[,] print)
 {
