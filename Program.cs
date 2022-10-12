@@ -7,8 +7,8 @@
 // 15 18
 
 Console.Clear();
-int Lenght0 = new Random().Next(3, 10);
-int Lenght1 = new Random().Next(3, 10);
+int Lenght0 = new Random().Next(5, 10);
+int Lenght1 = new Random().Next(4, 8);
 int[,] massiv1 = new int[Lenght0, Lenght1];
 int[,] massiv2 = new int[Lenght0, Lenght1];
 int[,] matrixMultiply = new int[massiv1.GetLength(0), massiv1.GetLength(1)];
