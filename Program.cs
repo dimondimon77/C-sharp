@@ -12,7 +12,7 @@ void FillArray(int[,] fill, int x, int y, int fillX, int fillY)
 {
             if (fillX > 0)
             {
-                for (int i = 0; i < fillX; i++,count ++)
+                for (int i = 0; i < fillX; i++,count++)
                 {
                     fill[i, y - 1] = count;
                 }
@@ -27,17 +27,16 @@ void FillArray(int[,] fill, int x, int y, int fillX, int fillY)
             }
             if (fillX < 0)
             {
-                for (int i = 0; i > fillX; i++,count ++)
+                for (int i = Math.Abs(fillX); i > 0; i--,count++)
                 {
                     fill[i, y-1] = count;
                 }
             }
             if (fillY < 0)
             {
-                for (int i = 0; i < fillY; i++)
+                for (int i = Math.Abs(fillY); i > 0; i--,count++)
                 {
-                    count ++;
-                    fill[x - 1, i] = count ;
+                    fill[x - 1,i-1] = count;
                 }
             }
 }
@@ -56,7 +55,9 @@ void PrintMassiv(int[,] print)
 }
 FillArray(massiv, 1, 0, 0, 4);
 FillArray(massiv, 0, 4, 4, 0);
-FillArray(massiv, 4, 1, 0, 4);
+FillArray(massiv, 4, 4, 0, -4);
+FillArray(massiv, 4, 1, -2, 0);
+FillArray(massiv, 2, 1, 0, 3);
 PrintMassiv(massiv);
 Console.WriteLine(count);
 
