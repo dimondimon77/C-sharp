@@ -13,9 +13,16 @@ int[,] massiv = new int[,] {{1,1,1,1,1,1},
                             {1,0,0,0,0,1},
                             {1,1,1,1,1,1},};
 int x = 0;
+int count = 1;
 void Fill(int row, int col)
 {
     x++;
+    count++;
+    if(x==12){
+    Fill(row-1, col);
+    x--;
+    }
+    if(x<12 || x>12){
     if (massiv[row, col] == 0)
     {
         massiv[row, col] = x;
@@ -33,6 +40,7 @@ void Fill(int row, int col)
         Fill(row-1, col);
         }
     }
+    }
 }
 void PrintMassiv(int[,] print)
 {
@@ -48,5 +56,6 @@ void PrintMassiv(int[,] print)
 }
 Fill(1, 1);
 PrintMassiv(massiv);
+Console.WriteLine(count);
 
 
