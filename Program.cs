@@ -19,7 +19,6 @@ void Fill(int row, int col)
     if(x==12){
     Fill(row-1, col);
     massiv[2, 1] = 12;
-    x--;
     }
     if (massiv[row, col] == 0)
     {
