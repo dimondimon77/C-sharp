@@ -6,27 +6,36 @@
 // 10 09 08 07
 Console.Clear();
 int[,] massiv = new int[4,4];
-void FillRight(int[,] fill,int x,int y, int step, int direction){
-
-        for (; y < fill.GetLength(1); y++)
+void FillRight(int[,] fill,int x,int y, int step){
+for (int i = 0;i<step && y < fill.GetLength(1); y++,i++)
         {
-            fill[x,y] = +1;
+            fill[x,y] = 12;
         }
 }
-void FillLeft(int[,] fill,int x,int y, int step, int direction){
+void FillLeft(int[,] fill,int x,int y, int step){
+    for (int i = 0;i<step && y < fill.GetLength(1); y--,i++)
+        {
+            fill[x,y] = 14;
+        }
     
 }
-void FillDown(int[,] fill,int x,int y, int step, int direction){
-    
+void FillDown(int[,] fill,int x,int y, int step){
+for (int i = 0;i<step && x < fill.GetLength(0); x++,i++)
+        {
+            fill[x,y] = 12;
+        }
 }
-void FillUp(int[,] fill,int x,int y, int step, int direction){
-    
+void FillUp(int[,] fill,int x,int y, int step){
+   for (int i = 0;i<step && x < fill.GetLength(0); x--,i++)
+        {
+            fill[x,y] = 6;
+        } 
 }
 void PrintMassiv(int[,] print)
 {
-    for (int i = 1; i < print.GetLength(0) - 1; i++)
+    for (int i = 0; i < print.GetLength(0); i++)
     {
-        for (int j = 1; j < print.GetLength(1) - 1; j++)
+        for (int j = 0; j < print.GetLength(1); j++)
         {
             Console.Write($"{print[i, j]} ");
         }
@@ -34,7 +43,13 @@ void PrintMassiv(int[,] print)
     }
     Console.WriteLine();
 }
-FillRight(massiv,0,0,0,0);
+FillRight(massiv,0,0,4);
+FillDown(massiv,0,3,3);
+FillLeft(massiv,3,3,4);
+FillUp(massiv,2,0,2);
+FillRight(massiv,1,1,2);
+FillDown(massiv,2,2,1);
+FillLeft(massiv,2,1,1);
 PrintMassiv(massiv);
 // Вариант решения через рекурсию
 // Console.Clear();
