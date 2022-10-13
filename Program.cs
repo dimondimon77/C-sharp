@@ -16,34 +16,38 @@ int x = 0;
 void Fill(int row, int col)
 {
     x++;
-    if(x==12){
-    Fill(row-1, col);
-    massiv[2, 1] = 12;
+    if (x == 12)
+    {
+        Fill(row - 1, col);
+        massiv[2, 1] = 12;
     }
     if (massiv[row, col] == 0)
     {
         massiv[row, col] = x;
-        Fill(row, col+1);
-        if(massiv[row, col] != 0){
-        x--;
-        Fill(row+1, col); 
+        Fill(row, col + 1);
+        if (massiv[row, col] != 0)
+        {
+            x--;
+            Fill(row + 1, col);
         }
-        if(massiv[row, col] != 0){
-        x--;
-        Fill(row, col-1);
+        if (massiv[row, col] != 0)
+        {
+            x--;
+            Fill(row, col - 1);
         }
-        if(massiv[row, col] != 0){
-        x--;
-        Fill(row-1, col);
+        if (massiv[row, col] != 0)
+        {
+            x--;
+            Fill(row - 1, col);
         }
     }
-    }
+}
 
 void PrintMassiv(int[,] print)
 {
-    for (int i = 1; i < print.GetLength(0)-1; i++)
+    for (int i = 1; i < print.GetLength(0) - 1; i++)
     {
-        for (int j = 1; j < print.GetLength(1)-1; j++)
+        for (int j = 1; j < print.GetLength(1) - 1; j++)
         {
             Console.Write($"{print[i, j]} ");
         }
