@@ -2,12 +2,12 @@
 // N = 5 -> "1, 2, 3, 4, 5"
 // N = 6 -> "1, 2, 3, 4, 5, 6"
 
-int Find1(int begin, int target, int count)
+int Find1(int count,int target)
 {
-    if (begin == target) return begin;
-    else {Console.Write($"{count} "); return Find1(begin + 1, target,count + 1);}
+    if (count == target) return count;
+    else {Console.Write($"{count} "); return Find1(count + 1, target);}
 }
-Console.WriteLine(Find1(1,10,1));
+Console.WriteLine(Find1(1,10));
 
 // Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
 // M = 1; N = 5 -> "1, 2, 3, 4, 5"
