@@ -6,7 +6,9 @@
 // 10 09 08 07
 Console.Clear();
 int[,] massiv = new int[4,4];
-void FillRight()
+void FillRight(int[,] fill,int x){
+    
+}
 for(int i= 0;i<massiv.GetLength(1);i++){
     massiv[0,i] = i;
     Console.WriteLine(massiv[0,i]);
