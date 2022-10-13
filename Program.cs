@@ -66,11 +66,13 @@ void PrintMassiv(int[,] print)
     {
         for (int j = 0; j < print.GetLength(1); j++)
         {
-            if(print[i, j]<10){
-            Console.Write($"{0}{print[i, j]} ");
+            if (print[i, j] < 10)
+            {
+                Console.Write($"{0}{print[i, j]} ");
             }
-            if(print[i, j]>=10){
-            Console.Write($"{print[i, j]} ");
+            if (print[i, j] >= 10)
+            {
+                Console.Write($"{print[i, j]} ");
             }
         }
         Console.WriteLine();
@@ -136,7 +138,12 @@ PrintMassiv(massiv);
 //     {
 //         for (int j = 1; j < print.GetLength(1) - 1; j++)
 //         {
+//            if(print[i, j]<10){
+//             Console.Write($"{0}{print[i, j]} ");
+//             }
+//             if(print[i, j]>=10){
 //             Console.Write($"{print[i, j]} ");
+//             }
 //         }
 //         Console.WriteLine();
 //     }
