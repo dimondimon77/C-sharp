@@ -7,7 +7,11 @@
 Console.Clear();
 int[,] massiv = new int[4,4];
 void FillRight(int[,] fill,int x,int y, int step, int direction){
-    
+
+        for (; y < fill.GetLength(1); y++)
+        {
+            fill[x,y] = +1;
+        }
 }
 void FillLeft(int[,] fill,int x,int y, int step, int direction){
     
@@ -18,6 +22,20 @@ void FillDown(int[,] fill,int x,int y, int step, int direction){
 void FillUp(int[,] fill,int x,int y, int step, int direction){
     
 }
+void PrintMassiv(int[,] print)
+{
+    for (int i = 1; i < print.GetLength(0) - 1; i++)
+    {
+        for (int j = 1; j < print.GetLength(1) - 1; j++)
+        {
+            Console.Write($"{print[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+FillRight(massiv,0,0,0,0);
+PrintMassiv(massiv);
 // Вариант решения через рекурсию
 // Console.Clear();
 // int[,] massiv = new int[,] {{1,1,1,1,1,1},
