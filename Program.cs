@@ -9,9 +9,14 @@ int[,] massiv = new int[4,4];
 void FillRight(int[,] fill,int x,int y, int step, int direction){
     
 }
-for(int i= 0;i<massiv.GetLength(1);i++){
-    massiv[0,i] = i;
-    Console.WriteLine(massiv[0,i]);
+void FillLeft(int[,] fill,int x,int y, int step, int direction){
+    
+}
+void FillDown(int[,] fill,int x,int y, int step, int direction){
+    
+}
+void FillUp(int[,] fill,int x,int y, int step, int direction){
+    
 }
 // Вариант решения через рекурсию
 // Console.Clear();
