@@ -1,44 +1,36 @@
-// Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
-// N = 5 -> "1, 2, 3, 4, 5"
-// N = 6 -> "1, 2, 3, 4, 5, 6"
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
 
-int Find1(int count,int target)
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+int Find1(int num)
 {
-    if (count == target) return count;
-    else {Console.Write($"{count} "); return Find1(count + 1, target);}
+    if (num == 1) return num;
+    else { Console.Write($"{num} "); return Find1(num - 1); }
 }
-Console.WriteLine(Find1(1,10));
+Console.WriteLine(Find1(8));
 
-// Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
-// M = 1; N = 5 -> "1, 2, 3, 4, 5"
-// M = 4; N = 8 -> "4, 6, 7, 8"
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
 int Find2(int begin, int target)
 {
     if (begin == target) return begin;
-    else {Console.Write($"{begin} "); return Find2(begin + 1, target);}
+    else return begin + Find2(begin + 1, target);
 }
+Console.WriteLine(Find2(1, 15));
 
-Console.WriteLine(Find2(9,12));
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
 
-// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
-// 453 -> 12
-// 45 -> 9
-
-int Find3(int num)
+int Akkerman(int m, int n)
 {
-    if (num < 10) return num;
-    else return num = Find3(num % 10) + Find3(num / 10);
+    if (m == 0) return n + 1;
+    if (m == 1) return n + 2;
+    if (m == 2) return 2 * n + 3;
+    else return Convert.ToInt32(Math.Pow(2, (n + 3)) - 3);
 }
-Console.WriteLine(Find3(55));
-
-// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
-// A = 3; B = 5 -> 243 (3⁵)
-// A = 2; B = 3 -> 8
-
-int Find4(int A, int B)
-{
-    if (B == 1) return A;
-    else return A * Find4(A, B - 1);
-}
-Console.WriteLine(Find4(2, 10));
+Console.WriteLine(Akkerman(2, 4));
