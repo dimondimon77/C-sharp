@@ -15,10 +15,10 @@ Console.WriteLine(Find1(8));
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-int Find2(int begin, int target)
+int Find2(int M, int N)
 {
-    if (begin == target) return begin;
-    else return begin + Find2(begin + 1, target);
+    if (M== N) return M;
+    else return M + Find2(M + 1, N);
 }
 Console.WriteLine(Find2(1, 15));
 
