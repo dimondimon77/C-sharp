@@ -17,7 +17,7 @@ Console.WriteLine(Find1(8));
 
 int Find2(int M, int N)
 {
-    if (M== N) return M;
+    if (M==N) return M;
     else return M + Find2(M + 1, N);
 }
 Console.WriteLine(Find2(1, 15));
