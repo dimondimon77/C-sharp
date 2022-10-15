@@ -88,7 +88,7 @@ FillDown(massiv, 2, 6, 4);
 FillLeft(massiv, 6, 6, 5);
 FillUp(massiv, 5, 2, 3);
 FillRight(massiv, 3, 2, 4);
-FillDown(massiv, 4, 5, 3);
+FillDown(massiv, 4, 5, 2);
 FillLeft(massiv, 5, 4, 2);
 FillUp(massiv, 4, 3, 1);
 FillRight(massiv, 4, 4, 1);
