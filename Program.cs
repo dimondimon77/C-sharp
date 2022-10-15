@@ -5,7 +5,7 @@
 // 11 16 15 06
 // 10 09 08 07
 Console.Clear();
-int[,] massiv = new int[4, 4];
+int[,] massiv = new int[7, 7];
 int count = 1;
 void FillRight(int[,] fill, int x, int y, int step)     //Метод который заполняет массив слева направо. Фиксируется строка, заполняются столбцы в положительную сторону.
                                                         //Принимает x и у и step. х - позиция строк, у - позиция столбцов,
@@ -79,13 +79,19 @@ void PrintMassiv(int[,] print)
     }
     Console.WriteLine();
 }
-FillRight(massiv, 1, 1, 3);
-FillDown(massiv, 1, 4, 3);
-FillLeft(massiv, 4, 4, 4);
-FillUp(massiv, 3, 1, 2);
-FillRight(massiv, 2, 2, 2);
-FillDown(massiv, 3, 3, 1);
-FillLeft(massiv, 3, 2, 1);
+FillRight(massiv, 1, 1, 7);
+FillDown(massiv, 1, 7, 7);
+FillLeft(massiv, 7, 7, 7);
+FillUp(massiv, 7, 1, 6);
+FillRight(massiv, 2, 1, 6);
+FillDown(massiv, 2, 6, 4);
+FillLeft(massiv, 6, 6, 5);
+FillUp(massiv, 5, 2, 3);
+FillRight(massiv, 3, 2, 4);
+FillDown(massiv, 4, 5, 3);
+FillLeft(massiv, 5, 4, 2);
+FillUp(massiv, 4, 3, 1);
+FillRight(massiv, 4, 4, 1);
 PrintMassiv(massiv);
 
 // Вариант решения через рекурсию
